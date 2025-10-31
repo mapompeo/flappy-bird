@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class FlappyBirdPlayerItj : MonoBehaviour
+public class Bird : MonoBehaviour
 {
     [SerializeField] private float jumpSpeed = 5f;
     
