@@ -19,9 +19,8 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
 
-        // Garante que o Game Over está escondido no início
+        // Garante que o Game Over estï¿½ escondido no inï¿½cio
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
 
@@ -30,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int points)
     {
-        if (isGameOver) return; // Não adiciona pontos após Game Over
+        if (isGameOver) return; // Nï¿½o adiciona pontos apï¿½s Game Over
 
         score += points;
         UpdateUI();
@@ -44,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if (isGameOver) return; // Evita chamar múltiplas vezes
+        if (isGameOver) return; // Evita chamar mï¿½ltiplas vezes
 
         isGameOver = true;
 
