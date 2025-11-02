@@ -390,27 +390,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flappy_15
-      rect:
-        serializedVersion: 2
-        x: 487
-        y: 415
-        width: 5
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c7108a2833057642812ee6dac925ba2
-      internalID: -1748103598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Flappy_16
       rect:
         serializedVersion: 2
@@ -469,132 +448,6 @@ TextureImporter:
       bones: []
       spriteID: ea8530d7f108c8d40a0dd7a944ecf960
       internalID: -284367147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_20
-      rect:
-        serializedVersion: 2
-        x: 443
-        y: 415
-        width: 24
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dc740924b4c24341b72fac6d97f8639
-      internalID: -447431978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_21
-      rect:
-        serializedVersion: 2
-        x: 468
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c7d1cf77601e644fb18681ac8e39dac
-      internalID: -1440671755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_22
-      rect:
-        serializedVersion: 2
-        x: 473
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0ff1a84dd7aa66408d363ed515d18dc
-      internalID: 545024823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_23
-      rect:
-        serializedVersion: 2
-        x: 478
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aebf6091ffe16044099ace752626e602
-      internalID: -95876425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_24
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 415
-        width: 7
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d1edfe96ec48d94a8a5d7b072b701fd
-      internalID: 1512514573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_25
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 415
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89d405e726938db478a40cd2fa62ca80
-      internalID: 1105289918
       vertices: []
       indices: 
       edges: []
@@ -751,9 +604,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 292
-        y: 355
-        width: 56
-        height: 17
+        y: 356
+        width: 55
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -898,9 +751,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 292
-        y: 271
+        y: 272
         width: 16
-        height: 17
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -936,34 +789,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flappy_43
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 287
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48293291a4713214f81d27546449850b
-      internalID: 937937299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Flappy_44
       rect:
         serializedVersion: 2
         x: 311
-        y: 287
-        width: 19
-        height: 19
+        y: 296
+        width: 7
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,9 +856,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 293
-        y: 229
-        width: 38
-        height: 41
+        y: 260
+        width: 7
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1045,9 +877,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 121
-        y: 192
+        y: 208
         width: 22
-        height: 38
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1065,10 +897,10 @@ TextureImporter:
       name: Flappy_49
       rect:
         serializedVersion: 2
-        x: 136
-        y: 195
-        width: 8
-        height: 12
+        x: 137
+        y: 196
+        width: 7
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1078,27 +910,6 @@ TextureImporter:
       bones: []
       spriteID: 83ad8ef3aaea0fd439222f2e0dd6b246
       internalID: -1308222507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_50
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 173
-        width: 7
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f30f6a7e7c82c2408aed346b73a979c
-      internalID: -604544005
       vertices: []
       indices: 
       edges: []
@@ -1213,9 +1024,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 138
-        y: 168
+        y: 173
         width: 6
-        height: 21
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1272,34 +1083,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flappy_59
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 121
-        width: 7
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8418d343eab6cec46bd33127ca5de4b2
-      internalID: 384180276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Flappy_60
       rect:
         serializedVersion: 2
         x: 138
-        y: 141
+        y: 147
         width: 6
-        height: 13
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1440,27 +1230,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flappy_67
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 104
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f22fe66a8f498054c878f4bf245bf0b1
-      internalID: 1740244469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Flappy_68
       rect:
         serializedVersion: 2
@@ -1477,27 +1246,6 @@ TextureImporter:
       bones: []
       spriteID: 946d412fda4af7a47a6cca525667a53e
       internalID: 1776577142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_69
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 78
-        width: 7
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ee12ee3091004a4d8776ada50679a6d
-      internalID: -776854284
       vertices: []
       indices: 
       edges: []
@@ -1561,27 +1309,6 @@ TextureImporter:
       bones: []
       spriteID: bde3ea4c44017cf42bae91fb02996b59
       internalID: -1398765847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_73
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 66
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1788abb79f85fe64f8c31ac9c1b50fcb
-      internalID: -236507229
       vertices: []
       indices: 
       edges: []
@@ -1666,27 +1393,6 @@ TextureImporter:
       bones: []
       spriteID: bcb36d4bea7662642932af0142454c56
       internalID: 1987488343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_78
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 1
-        width: 7
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd9a517d688d6444ab89e2742f068dce
-      internalID: 1800981021
       vertices: []
       indices: 
       edges: []
@@ -1803,7 +1509,7 @@ TextureImporter:
         x: 112
         y: 4
         width: 16
-        height: 8
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1824,7 +1530,7 @@ TextureImporter:
         x: 131
         y: 1
         width: 7
-        height: 11
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1839,22 +1545,106 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flappy_3
+      name: Flappy_4
       rect:
         serializedVersion: 2
-        x: 340
-        y: 414
-        width: 8
-        height: 11
+        x: 121
+        y: 192
+        width: 13
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ecc69f06c817b84f8c863b651c255ec
-      internalID: 589896816
+      spriteID: 96b43bf187f6873438f9683bcc640089
+      internalID: 833266830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy_5
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 182
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778c87c56dfbfea419a78c729a591da9
+      internalID: -49816543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 140
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af9257fdb35dac408cc32bb6f3a9a89
+      internalID: 1664308454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy_7
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 166
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09476bb14cf72144ac760d9892ac0de
+      internalID: 728039163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy_8
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 415
+        width: 61
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efe7dce11e6cdd47a5a4bbcdc12bdb7
+      internalID: -65506054
       vertices: []
       indices: 
       edges: []
@@ -1905,6 +1695,7 @@ TextureImporter:
       Flappy_37: 492726590
       Flappy_38: 181986129
       Flappy_39: 1465619883
+      Flappy_4: 833266830
       Flappy_40: -1790072867
       Flappy_41: 932877511
       Flappy_42: 1329616570
@@ -1915,6 +1706,7 @@ TextureImporter:
       Flappy_47: 1994485193
       Flappy_48: 1428497266
       Flappy_49: -1308222507
+      Flappy_5: -49816543
       Flappy_50: -604544005
       Flappy_51: 1524324122
       Flappy_52: -1927580915
@@ -1925,6 +1717,7 @@ TextureImporter:
       Flappy_57: -15610752
       Flappy_58: -1840505230
       Flappy_59: 384180276
+      Flappy_6: 1664308454
       Flappy_60: -189942829
       Flappy_61: 1331809827
       Flappy_62: 2101891115
@@ -1935,6 +1728,7 @@ TextureImporter:
       Flappy_67: 1740244469
       Flappy_68: 1776577142
       Flappy_69: -776854284
+      Flappy_7: 728039163
       Flappy_70: -1141503049
       Flappy_71: -794631504
       Flappy_72: -1398765847
@@ -1945,6 +1739,7 @@ TextureImporter:
       Flappy_77: 1987488343
       Flappy_78: 1800981021
       Flappy_79: 876749349
+      Flappy_8: -65506054
       Flappy_80: 651715816
       Flappy_81: 1715552272
       Flappy_82: -1591460705
