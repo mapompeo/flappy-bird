@@ -1,17 +1,27 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    [SerializeField] private GameObject startPanel;
+    
     [SerializeField] private TMP_Text liveScoreText;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text bestScoreText;
+    
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject newBestIcon;
-    [SerializeField] private GameObject startPanel;
+    [SerializeField] private Image medalImage;
+    [SerializeField] private Sprite bronzeMedal;
+    [SerializeField] private Sprite silverMedal;
+    [SerializeField] private Sprite goldMedal;
+    [SerializeField] private Sprite platinumMedal;
 
+    
     private int score = 0;
     private int bestScore = 0;
     private bool isGameOver = false;
@@ -87,7 +97,39 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", bestScore); // Salva a variavel no cache
             PlayerPrefs.Save();
         }
+        
+        // Ativa o painel de Game Over primeiro
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
 
+        // Lógica da medalha
+        medalImage.gameObject.SetActive(true);
+        if (score >= 40)
+        {
+            medalImage.sprite = platinumMedal;
+        }
+        else if (score >= 30)
+        {
+            medalImage.sprite = goldMedal;
+        }
+        else if (score >= 20)
+        {
+            medalImage.sprite = silverMedal;
+        }
+        else if (score >= 10)
+        {
+            medalImage.sprite = bronzeMedal;
+        }
+        else
+        {
+            medalImage.sprite = null;
+            medalImage.gameObject.SetActive(false);
+        }
+
+
+
+
+        
         if (scoreText != null)
             scoreText.text = score.ToString();
 
