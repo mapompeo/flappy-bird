@@ -6,10 +6,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private GameObject gameOverPanel; // <- NOVO
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject startPanel;
 
     private int score = 0;
-    private bool isGameOver = false; // <- NOVO
+    private bool isGameOver = false;
+    private bool gameStarted = false;
 
     private void Awake()
     {
@@ -20,16 +22,38 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
 
-        // Garante que o Game Over est� escondido no in�cio
+        Time.timeScale = 0f; // jogo parado no início
+
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
+
+        if (startPanel != null)
+            startPanel.SetActive(true); // mostra tela inicial
 
         UpdateUI();
     }
 
+    private void Update()
+    {
+        // inicia ao apertar espaço ou clicar
+        if (!gameStarted && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        {
+            StartGame();
+        }
+    }
+
+    private void StartGame()
+    {
+        gameStarted = true;
+        Time.timeScale = 1f; // solta o jogo
+
+        if (startPanel != null)
+            startPanel.SetActive(false);
+    }
+
     public void AddScore(int points)
     {
-        if (isGameOver) return; // N�o adiciona pontos ap�s Game Over
+        if (isGameOver || !gameStarted) return;
 
         score += points;
         UpdateUI();
@@ -43,17 +67,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if (isGameOver) return; // Evita chamar m�ltiplas vezes
+        if (isGameOver) return;
 
         isGameOver = true;
-
-        // Mostra o painel de Game Over
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
 
-        // Pausa o jogo (opcional)
         Time.timeScale = 0f;
-
         Debug.Log("Game Over! Score final: " + score);
     }
 
@@ -61,10 +81,13 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         isGameOver = false;
-        Time.timeScale = 1f; // Volta o tempo normal
+        gameStarted = false;
+        Time.timeScale = 0f; // volta parado com startPanel
 
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
+        if (startPanel != null)
+            startPanel.SetActive(true);
 
         UpdateUI();
     }

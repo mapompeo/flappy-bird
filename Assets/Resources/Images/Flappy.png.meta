@@ -143,7 +143,7 @@ TextureImporter:
         serializedVersion: 2
         x: 146
         y: 256
-        width: 158
+        width: 144
         height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -163,9 +163,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 292
-        y: 454
-        width: 169
-        height: 58
+        y: 456
+        width: 168
+        height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,27 +432,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flappy_17
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 422
-        width: 8
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a01b57b7aeb2170419615bf1d463f6be
-      internalID: 1409311944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Flappy_18
       rect:
         serializedVersion: 2
@@ -658,27 +637,6 @@ TextureImporter:
       bones: []
       spriteID: d66ed0c2b8127304cb7cc6bd36b9ada9
       internalID: -169172595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flappy_28
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 384
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72c1f99e5adb7bb4cbcf212eebc7c4e9
-      internalID: -1675991028
       vertices: []
       indices: 
       edges: []
@@ -1365,7 +1323,7 @@ TextureImporter:
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1889,7 +1847,7 @@ TextureImporter:
         width: 8
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

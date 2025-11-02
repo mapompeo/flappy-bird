@@ -27,12 +27,12 @@ public class Bird : MonoBehaviour
 
     private void Pular()
     {
-        if (!Input.GetKeyDown(KeyCode.Space)) return;
-
-        _rb2D.velocity = Vector2.up * jumpSpeed;
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            _rb2D.velocity = Vector2.up * jumpSpeed;
     }
 
-    // Detecta colisão com canos e chão
+
+    // Detecta colisï¿½o com canos e chï¿½o
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameOver();
