@@ -11,6 +11,6 @@ public class Ground : MonoBehaviour
         
         if(bird == null) return;
         
-        bird.GameOver();
+        bird.Die();
     }
 }

@@ -15,7 +15,7 @@ public class PipeSpawner : MonoBehaviour
     [Header("Difficulty Settings")]
     [SerializeField] private float difficultyIncreaseInterval = 10f; // a cada 10s
     [SerializeField] private float spawnReductionRate = 0.05f; // diminui 5% por vez
-    [SerializeField] private float minSpawnLimit = 0.5f; // limite mínimo
+    [SerializeField] private float minSpawnLimit = 0.5f; // limite mï¿½nimo
 
     [SerializeField] private float pipeSpeedIncrease = 0.3f; // aumenta 0.3 por ciclo
     [SerializeField] private float maxPipeSpeed = 10f;
@@ -53,7 +53,7 @@ public class PipeSpawner : MonoBehaviour
             if (pipeScript != null)
                 pipeScript.SetSpeed(currentPipeSpeed);
 
-            // Aguarda o próximo spawn
+            // Aguarda o prï¿½ximo spawn
             float randomInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
             yield return new WaitForSeconds(randomInterval);
         }
@@ -69,3 +69,4 @@ public class PipeSpawner : MonoBehaviour
         currentPipeSpeed = Mathf.Min(maxPipeSpeed, currentPipeSpeed + pipeSpeedIncrease);
     }
 }
+
