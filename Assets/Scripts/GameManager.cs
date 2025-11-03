@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text bestScoreText;
 
+    [SerializeField] private ParallaxManager parallaxManager;
+    [SerializeField] private int pointsPerThemeChange = 2;
+    private bool isNight = false;
+
+
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject newBestIcon;
     [SerializeField] private Image medalImage;
@@ -91,14 +96,10 @@ public class GameManager : MonoBehaviour
     public void AddScore(int points)
     {
         if (isGameOver || !gameStarted) return;
-
         score += points;
+        parallaxManager.OnScoreChanged(score); // ← Transição automática
         UpdateUI();
-
-        if (pointSFX != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(pointSFX, pointSFXVolume);
-        }
+        if (pointSFX != null) audioSource.PlayOneShot(pointSFX, pointSFXVolume);
     }
 
     private void UpdateUI()
