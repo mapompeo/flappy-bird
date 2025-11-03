@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
         // --- ALTERAÇÃO 1 TERMINA AQUI ---
-
+        
 
         // Animação do Game Over
         if (gameOverAnimator != null)
@@ -165,8 +165,14 @@ public class GameManager : MonoBehaviour
             newBestIcon.SetActive(true);
             bestScore = score;
             PlayerPrefs.SetInt("BestScore", bestScore);
-            PlayerPrefs.Save();
         }
+        
+        // Atualiza o saldo de pontos
+        int saldoAntigo = PlayerPrefs.GetInt("PlayerPoints", 0);
+        int novoSaldo = saldoAntigo + score;
+        PlayerPrefs.SetInt("PlayerPoints", novoSaldo);
+        PlayerPrefs.Save();
+        
 
         medalImage.gameObject.SetActive(true);
         if (score >= 40)
