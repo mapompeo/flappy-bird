@@ -3,7 +3,11 @@ guid: 32659295ed1ab4a43a158ffa583f38cf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - scoreText: {instanceID: 0}
+  - gameOverPanel: {instanceID: 0}
+  - deathSFX: {fileID: 8300000, guid: af51ec3bd87683f45b17d09e053af773, type: 3}
+  - pointSFX: {fileID: 8300000, guid: 9fbfedbd36b1b3c42b99182febdc506a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
