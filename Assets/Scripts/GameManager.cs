@@ -1,15 +1,31 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    [SerializeField] private GameObject startPanel;
+    
+    [SerializeField] private TMP_Text liveScoreText;
     [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private GameObject gameOverPanel; // <- NOVO
+    [SerializeField] private TMP_Text bestScoreText;
+    
+    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject newBestIcon;
+    [SerializeField] private Image medalImage;
+    [SerializeField] private Sprite bronzeMedal;
+    [SerializeField] private Sprite silverMedal;
+    [SerializeField] private Sprite goldMedal;
+    [SerializeField] private Sprite platinumMedal;
 
+    
     private int score = 0;
-    private bool isGameOver = false; // <- NOVO
+    private int bestScore = 0;
+    private bool isGameOver = false;
+    private bool gameStarted = false;
 
     private void Awake()
     {
@@ -19,18 +35,39 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
 
-        // Garante que o Game Over está escondido no início
+        // Carrega o recorde salvo
+        bestScore = PlayerPrefs.GetInt("BestScore", 0);
+
+        Time.timeScale = 0f;
+
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
+
+        if (startPanel != null)
+            startPanel.SetActive(true);
 
         UpdateUI();
     }
 
+    private void Update()
+    {
+        if (!gameStarted && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+            StartGame();
+    }
+
+    private void StartGame()
+    {
+        gameStarted = true;
+        Time.timeScale = 1f;
+
+        if (startPanel != null)
+            startPanel.SetActive(false);
+    }
+
     public void AddScore(int points)
     {
-        if (isGameOver) return; // Não adiciona pontos após Game Over
+        if (isGameOver || !gameStarted) return;
 
         score += points;
         UpdateUI();
@@ -38,34 +75,82 @@ public class GameManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (scoreText != null)
-            scoreText.text = score.ToString();
+        if (liveScoreText != null)
+            liveScoreText.text = score.ToString();
+
+        if (bestScoreText != null)
+            bestScoreText.text = bestScore.ToString();
     }
 
     public void GameOver()
     {
-        if (isGameOver) return; // Evita chamar múltiplas vezes
+        if (isGameOver) return;
 
         isGameOver = true;
+        Time.timeScale = 0f;
 
-        // Mostra o painel de Game Over
+        newBestIcon.SetActive(false);
+        if (score > bestScore)
+        {
+            newBestIcon.SetActive(true);
+            bestScore = score;
+            PlayerPrefs.SetInt("BestScore", bestScore); // Salva a variavel no cache
+            PlayerPrefs.Save();
+        }
+        
+        // Ativa o painel de Game Over primeiro
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
 
-        // Pausa o jogo (opcional)
-        Time.timeScale = 0f;
+        // LÃ³gica da medalha
+        medalImage.gameObject.SetActive(true);
+        if (score >= 40)
+        {
+            medalImage.sprite = platinumMedal;
+        }
+        else if (score >= 30)
+        {
+            medalImage.sprite = goldMedal;
+        }
+        else if (score >= 20)
+        {
+            medalImage.sprite = silverMedal;
+        }
+        else if (score >= 10)
+        {
+            medalImage.sprite = bronzeMedal;
+        }
+        else
+        {
+            medalImage.sprite = null;
+            medalImage.gameObject.SetActive(false);
+        }
 
-        Debug.Log("Game Over! Score final: " + score);
+
+
+
+        
+        if (scoreText != null)
+            scoreText.text = score.ToString();
+
+        if (bestScoreText != null)
+            bestScoreText.text = bestScore.ToString();
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
     }
 
     public void ResetScore()
     {
         score = 0;
         isGameOver = false;
-        Time.timeScale = 1f; // Volta o tempo normal
+        gameStarted = false;
+        Time.timeScale = 0f;
 
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
+        if (startPanel != null)
+            startPanel.SetActive(true);
 
         UpdateUI();
     }

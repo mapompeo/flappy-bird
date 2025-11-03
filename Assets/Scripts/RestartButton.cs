@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartButton : MonoBehaviour
 {
+	[SerializeField] private GameObject gameOverPanel;
     public void RestartGame()
     {
         Debug.Log("==== REINICIANDO JOGO ===="); // Para testar
@@ -13,7 +14,7 @@ public class RestartButton : MonoBehaviour
         if (GameManager.Instance != null)
             GameManager.Instance.ResetScore();
 
-        // Recarrega pelo NOME da cena (mais confiável)
+        // Recarrega pelo NOME da cena (mais confiï¿½vel)
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
