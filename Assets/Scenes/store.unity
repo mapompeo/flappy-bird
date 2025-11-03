@@ -1778,7 +1778,6 @@ GameObject:
   - component: {fileID: 894938733}
   - component: {fileID: 894938732}
   - component: {fileID: 894938731}
-  - component: {fileID: 894938730}
   m_Layer: 0
   m_Name: ground (1)
   m_TagString: Untagged
@@ -1794,26 +1793,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894938728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.281406, y: -3.2789686, z: 0.0567287}
+  m_LocalPosition: {x: 21.281406, y: -3.2789686, z: -1}
   m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1835463894}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &894938730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894938728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3609578162a759047af6f254d8322623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
 --- !u!61 &894938731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2066,7 +2052,6 @@ GameObject:
   - component: {fileID: 1333276383}
   - component: {fileID: 1333276382}
   - component: {fileID: 1333276381}
-  - component: {fileID: 1333276380}
   m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
@@ -2082,26 +2067,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333276378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25884116, y: -3.2789686, z: 0.0567287}
+  m_LocalPosition: {x: 0.25884116, y: -3.2789686, z: -1}
   m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1835463894}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1333276380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333276378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3609578162a759047af6f254d8322623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
 --- !u!61 &1333276381
 BoxCollider2D:
   m_ObjectHideFlags: 0
