@@ -135,6 +135,13 @@ public class GameManager : MonoBehaviour
             Destroy(tempAudio, deathSFX.length);
         }
 
+        // --- ALTERAÇÃO 1 INICIA AQUI ---
+        // Ativa o painel PRIMEIRO, para a animação poder tocar
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
+        // --- ALTERAÇÃO 1 TERMINA AQUI ---
+
+
         // Animação do Game Over
         if (gameOverAnimator != null)
         {
@@ -144,7 +151,7 @@ public class GameManager : MonoBehaviour
                 cg.interactable = true;
                 cg.blocksRaycasts = true;
             }
-            gameOverAnimator.SetTrigger("Show");
+            gameOverAnimator.SetTrigger("Show"); // <-- Agora funciona, pois o painel está ativo
         }
         else
         {
@@ -182,9 +189,7 @@ public class GameManager : MonoBehaviour
         if (bestScoreText != null)
             bestScoreText.text = bestScore.ToString();
 
-        // Ativa painel
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(true);
+        // (Linha 'gameOverPanel.SetActive(true)' foi REMOVIDA DAQUI pois foi movida para cima)
 
         Time.timeScale = 0f;
     }
@@ -220,12 +225,8 @@ public class GameManager : MonoBehaviour
         if (birdScript != null)
             birdScript.ResetBird();
 
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(false);
-
-        if (startPanel != null)
-            startPanel.SetActive(true);
-
+        // --- ALTERAÇÃO 2 INICIA AQUI ---
+        // 1. Reseta a animação PRIMEIRO (enquanto o painel ainda está visível)
         if (gameOverAnimator != null)
         {
             CanvasGroup cg = gameOverAnimator.GetComponent<CanvasGroup>();
@@ -235,8 +236,18 @@ public class GameManager : MonoBehaviour
                 cg.interactable = false;
                 cg.blocksRaycasts = false;
             }
-            gameOverAnimator.Play("Hidden", 0, 0f);
+            gameOverAnimator.Play("Hidden", 0, 0f); // <-- Agora funciona
         }
+        
+        // 2. AGORA desativa o painel
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+        // --- ALTERAÇÃO 2 TERMINA AQUI ---
+
+        if (startPanel != null)
+            startPanel.SetActive(true);
+
+        // (Blocos 'gameOverPanel.SetActive(false)' e 'gameOverAnimator' foram REMOVIDOS DAQUI pois foram movidos para cima)
 
         UpdateUI();
     }
