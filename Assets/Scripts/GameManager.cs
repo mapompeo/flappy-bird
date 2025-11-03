@@ -193,7 +193,7 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 0f;
     }
-
+    
     private IEnumerator FlashEffect()
     {
         float fadeDuration = 0.30f;
