@@ -20,7 +20,7 @@ public class Pipe : MonoBehaviour
     {
         transform.Translate(Time.deltaTime * pipeSpeed * Vector2.left);
 
-        // Marca ponto quando o pássaro passa o cano
+        
         if (bird != null && !pointGiven && bird.position.x > transform.position.x)
         {
             pointGiven = true;
@@ -36,6 +36,6 @@ public class Pipe : MonoBehaviour
         var bird = other.gameObject.GetComponent<Bird>();
         if (bird == null) return;
 
-        bird.GameOver();
+        bird.Die();
     }
 }

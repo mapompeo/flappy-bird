@@ -3,7 +3,10 @@ guid: 897ca71bcb914984c98ca2981faf1b01
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - teto: {instanceID: 0}
+  - deathSFX: {fileID: 8300000, guid: af51ec3bd87683f45b17d09e053af773, type: 3}
+  - jumpSFX: {fileID: 8300000, guid: e47061aa0d064ed48a4295044ee220e3, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
