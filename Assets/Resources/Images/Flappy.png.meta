@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1191,9 +1191,9 @@ TextureImporter:
       name: Flappy_65
       rect:
         serializedVersion: 2
-        x: 114
+        x: 115
         y: 93
-        width: 18
+        width: 17
         height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1691,6 +1691,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Flappy_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 154
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73246716df8ac54b850dc0080f83674
+      internalID: 1971606266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy_11
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 128
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b383befbb2c53d418cc581fd2cfd17e
+      internalID: -1228279242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flappy_12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 102
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2433af990d7b94fb436775ddd3489a
+      internalID: -264330284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1710,6 +1773,8 @@ TextureImporter:
       Flappy_0: -1457109982
       Flappy_1: 55589126
       Flappy_10: 1971606266
+      Flappy_11: -1228279242
+      Flappy_12: -264330284
       Flappy_15: -1748103598
       Flappy_16: -128789480
       Flappy_17: 1409311944
