@@ -1,6 +1,10 @@
+<div align="center">
+
 # 🐦 Flappy Bird
 
-### 🎮 [Jogue Agora!](https://i.pinimg.com/236x/2f/c5/42/2fc5429cc937124e13e1b4ff059bc1c5.jpg) 🎮
+<a href="https://flappy-bird-univali.vercel.app/"><img src="./Assets/Resources/Images/background/mockup-flappy.png" height="auto" width="auto"></a>
+
+</div>
 
 ## 📖 Sobre o Projeto
 
