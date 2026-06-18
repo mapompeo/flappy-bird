@@ -2,6 +2,10 @@
 
 ### 🎮 [Jogue Agora!](https://flappy-bird-univali.vercel.app/) 🎮
 
+<a href="https://flappy-bird-univali.vercel.app/">
+  <img src="images/flappy-bird-preview.jpg" width="800" alt="Flappy Bird">
+</a>
+
 ## 📖 Sobre o Projeto
 
 Este projeto é uma recriação do icônico Flappy Bird, originalmente desenvolvido por Dong Nguyen em 2013. O jogador controla um pássaro que deve atravessar uma série infinita de canos suspensos no ar, evitando colisões com os obstáculos ou com o chão através de toques na tela ou pressionando a barra de espaço para impulsionar o pássaro para cima enquanto a gravidade o puxa constantemente para baixo. Desenvolvido com Unity Engine e C#, o projeto aplica conceitos de física 2D, detecção de colisões, gerenciamento de estado e interface de usuário, sendo disponibilizado em versão WebGL para execução diretamente no navegador sem necessidade de instalação.
