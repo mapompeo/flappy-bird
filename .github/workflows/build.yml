@@ -53,7 +53,38 @@ jobs:
 
       - name: Apply fullscreen scale
         run: |
-          sed -i 's/canvas\.style\.width = "960px";/canvas.style.width = "960px";\n\n        function scaleToFit() {\n          var scaleX = window.innerWidth \/ 960;\n          var scaleY = window.innerHeight \/ 600;\n          var scale = Math.min(scaleX, scaleY);\n          container.style.transform = "translate(-50%, -50%) scale(" + scale + ")";\n        }\n        scaleToFit();\n        window.addEventListener("resize", scaleToFit);/' webgl-build/index.html
+          python3 << 'EOF'
+          import re
+
+          with open('webgl-build/index.html', 'r') as f:
+              html = f.read()
+
+          scale_js = """
+            function scaleToFit() {
+              var scaleX = window.innerWidth / 960;
+              var scaleY = window.innerHeight / 600;
+              var scale = Math.min(scaleX, scaleY);
+              container.style.transform = "translate(-50%, -50%) scale(" + scale + ")";
+            }
+            scaleToFit();
+            window.addEventListener("resize", scaleToFit);
+          """
+
+          html = re.sub(
+              r'(canvas\.style\.height\s*=\s*"600px"\s*;)',
+              r'\1' + scale_js,
+              html
+          )
+
+          with open('webgl-build/index.html', 'w') as f:
+              f.write(html)
+          EOF
+
+          cat >> webgl-build/TemplateData/style.css << 'EOF'
+
+          #unity-footer { display: none !important; }
+          body { background: #231F20; overflow: hidden; }
+          EOF
 
       - name: Commit and push build
         run: |
