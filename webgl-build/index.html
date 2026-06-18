@@ -95,6 +95,15 @@
 
         canvas.style.width = "960px";
         canvas.style.height = "600px";
+
+        function scaleToFit() {
+          var scaleX = window.innerWidth / 960;
+          var scaleY = window.innerHeight / 600;
+          var scale = Math.min(scaleX, scaleY);
+          container.style.transform = "translate(-50%, -50%) scale(" + scale + ")";
+        }
+        scaleToFit();
+        window.addEventListener("resize", scaleToFit);
       }
 
       loadingBar.style.display = "block";

@@ -1,8 +1,8 @@
-body { padding: 0; margin: 0; overflow: hidden; background: #231F20; }
-#unity-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; }
-#unity-container.unity-desktop { left: 0; top: 0; transform: none; }
+body { padding: 0; margin: 0; background: #231F20; overflow: hidden; }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
 #unity-container.unity-mobile { width: 100%; height: 100% }
-#unity-canvas { background: #231F20; max-width: 100vw; max-height: 100vh; object-fit: contain; }
+#unity-canvas { background: #231F20 }
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
 #unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
