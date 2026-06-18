@@ -1,7 +1,5 @@
 # 🐦 Flappy Bird
 
-### 🎮 [Jogue Agora!](https://flappy-bird-univali.vercel.app/) 🎮
-
 <a href="https://flappy-bird-univali.vercel.app/">
   <img src="images/flappy-bird-preview.jpg" width="800" alt="Flappy Bird">
 </a>
