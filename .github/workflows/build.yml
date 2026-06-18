@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,16 +42,18 @@ jobs:
           rm -rf webgl-build/Build webgl-build/TemplateData
           cp -r build/WebGL/WebGL/. webgl-build/
 
-      - name: Decompress gz files
+      - name: Decompress gz files and fix index.html
         run: |
           cd webgl-build/Build
           for f in *.gz; do gunzip -k "$f"; done
+          cd ../..
+          sed -i 's/WebGL\.framework\.js\.gz/WebGL\.framework\.js/g' webgl-build/index.html
+          sed -i 's/WebGL\.data\.gz/WebGL\.data/g' webgl-build/index.html
+          sed -i 's/WebGL\.wasm\.gz/WebGL\.wasm/g' webgl-build/index.html
 
-      - name: Update index.html to use decompressed files
+      - name: Apply fullscreen scale
         run: |
-          sed -i 's/\.framework\.js\.gz/\.framework\.js/g' webgl-build/index.html
-          sed -i 's/\.data\.gz/\.data/g' webgl-build/index.html
-          sed -i 's/\.wasm\.gz/\.wasm/g' webgl-build/index.html
+          sed -i 's/canvas\.style\.width = "960px";/canvas.style.width = "960px";\n\n        function scaleToFit() {\n          var scaleX = window.innerWidth \/ 960;\n          var scaleY = window.innerHeight \/ 600;\n          var scale = Math.min(scaleX, scaleY);\n          container.style.transform = "translate(-50%, -50%) scale(" + scale + ")";\n        }\n        scaleToFit();\n        window.addEventListener("resize", scaleToFit);/' webgl-build/index.html
 
       - name: Commit and push build
         run: |
