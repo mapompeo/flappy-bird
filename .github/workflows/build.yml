@@ -1,0 +1,59 @@
+name: Build WebGL
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-WebGL-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-WebGL-
+            Library-
+
+      - name: Build WebGL
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          unityVersion: 2021.3.38f1
+          targetPlatform: WebGL
+          buildsPath: build
+
+      - name: Copy build to webgl-build
+        run: |
+          rm -rf webgl-build/Build webgl-build/TemplateData
+          cp -r build/WebGL/WebGL/. webgl-build/
+
+      - name: Decompress gz files
+        run: |
+          cd webgl-build/Build
+          for f in *.gz; do gunzip -k "$f"; done
+
+      - name: Update index.html to use decompressed files
+        run: |
+          sed -i 's/\.framework\.js\.gz/\.framework\.js/g' webgl-build/index.html
+          sed -i 's/\.data\.gz/\.data/g' webgl-build/index.html
+          sed -i 's/\.wasm\.gz/\.wasm/g' webgl-build/index.html
+
+      - name: Commit and push build
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add webgl-build/
+          git diff --staged --quiet || git commit -m "ci: update WebGL build [skip ci]"
+          git push
