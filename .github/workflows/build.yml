@@ -80,11 +80,8 @@ jobs:
               f.write(html)
           EOF
 
-          cat >> webgl-build/TemplateData/style.css << 'EOF'
-
-          #unity-footer { display: none !important; }
-          body { background: #231F20; overflow: hidden; }
-          EOF
+          echo "#unity-footer { display: none !important; }" >> webgl-build/TemplateData/style.css
+          echo "body { background: #231F20; overflow: hidden; }" >> webgl-build/TemplateData/style.css
 
       - name: Commit and push build
         run: |
